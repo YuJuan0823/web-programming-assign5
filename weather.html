@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather</title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="mycss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6">
+      <!-- Large button group -->
+      <div class="btn-group">
+        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+           <span id="loca">台北市</span><span class="caret"></span>
+        </button>
+        <ul id="dropdown" class="dropdown-menu" role="menu">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn1"><span id="taipei">台北市</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn2"><span id="new-taipei">新北市</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn3"><span id="taichung">台中市</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn4"><span id="tainan">台南市</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn5"><span id="kaohsiung">高雄市</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn6"><span id="keelung">基隆市</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn7"><span id="taoyuan">桃園市</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn8"><span id="hsinchu-city">新竹市</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn9"><span id="hsinchu-county">新竹縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn10"><span id="miaoli">苗栗縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn11"><span id="changhua">彰化縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn12"><span id="nantou">南投縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn13"><span id="yunlin">雲林縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn14"><span id="chiayi-city">嘉義市</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn15"><span id="chiayi-county">嘉義縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn16"><span id="pingtung">屏東縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn17"><span id="yilan">宜蘭縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn18"><span id="hualien">花蓮縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn19"><span id="taitung">台東縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn20"><span id="penghu">澎湖縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn21"><span id="kinmen">金門縣</span><span class="sign">&#8451;</span></a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="btn22"><span id="lienchiang">連江縣</span><span class="sign">&#8451;</span></a></li>
+        </ul>
+      </div>
+      <div><span class="temperature"> </span> &#8451;</div>
+    </div>
+    <div class="col-xs-6">
+      <canvas id="today" width="100" height="100"></canvas>
+      <div class="condition">
+          <span class="date"></span>
+          <span>: </span>
+          <span class="weather"></span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Forecast</div>
+
+            <!-- Table -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th id=date2></th>
+                  <th id=date3></th>
+                  <th id=date4></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span id=temp2></span> &#8451;</td>
+                  <td><span id=temp3></span> &#8451;</td>
+                  <td><span id=temp4></span> &#8451;</td>
+                </tr>
+                <tr>
+                  <td><canvas id="day1" width="64" height="64"></canvas></td>
+                  <td><canvas id="day2" width="64" height="64"></canvas></td>
+                  <td><canvas id="day3" width="64" height="64"></canvas></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+  </div>
+  
+</div>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<script src="http://darkskyapp.github.io/skycons/skycons.js"></script>
+
+<script src="myapp.js"></script>
+
+
+</body>
+</html>
